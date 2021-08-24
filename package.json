@@ -39,8 +39,6 @@
     "eslint-loader": "^4.0.2",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.2.0",
-    "postcss": "^8.3.6",
-    "postcss-prefix-webpack": "^1.0.3",
     "sass": "^1.37.5",
     "sass-loader": "^12.1.0",
     "webpack": "^5.50.0",
