@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <title>Web application Excel</title>
+</head>
+<body>
+
+  <div id="app" class="container">
+    <div class="excel">
+      <div class="excel__header">
+        <input type="text" class="input" value="Новая таблица">
+
+        <div class="button-block">
+          <div class="button logout">
+            <span title="выход" class="material-icons-two-tone">logout</span>
+          </div>
+          <div class="button delete">
+            <span title="удалить"  class="material-icons-outlined">delete_forever</span>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="excel__toolbar">
+        <div class="font-style">
+          <div class="button">
+            <span class="material-icons-outlined">format_bold</span>
+          </div>
+          <div class="button">
+            <span class="material-icons-outlined">format_italic</span>
+          </div>
+          <div class="button">
+            <span class="material-icons-outlined">format_underlined</span>
+          </div>
+        </div>
+
+        <div class="v-hr"></div>
+
+        <div class="color">
+
+          <div class="button font-color">
+            <span class="material-icons-outlined">format_color_text</span>
+            <input type="color">
+          </div>
+
+          <div class="button row-color">
+            <span class="material-icons-outlined">format_color_fill</span>
+            <input type="color">
+          </div>
+
+        </div>
+
+        <div class="v-hr"></div>
+
+        <div class="text">
+          <div class="size">
+            <div class="button">           
+              <span class="material-icons-outlined">format_size</span>
+            </div>
+          </div>
+
+          <div class="align">
+            <div class="button">           
+              <span class="material-icons-outlined">format_align_left</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="excel__formula">
+        <div class="text">fx</div>
+        <div class="input" spellcheck="false" contenteditable="true"></div>
+      </div>
+
+      <!-- EXCEL TABLE -->
+
+      <div class="excel__table">
+
+        <div class="row">
+
+          <div class="row-info"></div>
+
+          <div class="row-data top-columns">
+            <div class="column">
+              A
+            </div>
+            <div class="column">
+              B
+            </div>
+            <div class="column">
+              C
+            </div>
+            <div class="column">
+              D
+            </div>
+            <div class="column">
+              E
+            </div>
+            <div class="column">
+              F
+            </div>
+            <div class="column">
+              G
+            </div>
+            <div class="column">
+              H
+            </div>
+            <div class="column">
+              I
+            </div>
+            <div class="column">
+              M
+            </div>
+            <div class="column">
+              L
+            </div>
+            <div class="column">
+              N
+            </div>
+            <div class="column">
+              O
+            </div>
+            <div class="column">
+              P
+            </div>
+            <div class="column">
+              R
+            </div>
+            <div class="column">
+              S
+            </div>
+            <div class="column">
+              A
+            </div>
+            <div class="column">
+              B
+            </div>
+            <div class="column">
+              C
+            </div>
+            <div class="column">
+              A
+            </div>
+            <div class="column">
+              B
+            </div>
+            <div class="column">
+              C
+            </div>
+            <div class="column">
+              A
+            </div>
+            <div class="column">
+              B
+            </div>
+            <div class="column">
+              C
+            </div>
+            <div class="column">
+              A
+            </div>
+            <div class="column">
+              B
+            </div>
+            <div class="column">
+              C
+            </div>
+            <div class="column">
+              A
+            </div>
+            <div class="column">
+              B
+            </div>
+            <div class="column">
+              C
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="row-info">
+            1
+          </div>
+
+          <div class="row-data">
+            <div class="cell" contenteditable="">A1</div>
+            <div class="cell selected" contenteditable="">B1</div>
+            <div class="cell" contenteditable="">C1</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row-info">
+            2
+          </div>
+
+          <div class="row-data">
+            <div class="cell" contenteditable="">A2</div>
+            <div class="cell" contenteditable="">B2</div>
+            <div class="cell" contenteditable="">C2</div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+  
+</body>
+</html>

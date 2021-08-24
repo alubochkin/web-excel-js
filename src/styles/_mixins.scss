@@ -1,0 +1,15 @@
+@mixin button($color-icon, $background, $padding, $radius, $hover) {
+  background: $background;
+  color: #000;
+  padding: $padding;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+  border-radius: $radius;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: $hover;
+    color: $color-icon;
+  }
+}
