@@ -1,0 +1,140 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.dashboard {
+
+  .dashboard__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $db-header-height;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 240px 1fr 240px;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0px 2px 13px 2px rgb(0 0 0 / 21%);
+
+    .header-logo {
+      width: 240px;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .logo {
+        background: url('../xls.png');
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+      }
+      h1 {
+        font-size: 22px;
+        color: $color-blue;
+      }
+    }
+      
+      .search {
+        height: 100%;
+        margin: 0 auto 0 0;
+        width: 100%;
+        display: flex;
+        align-items: center;    
+        
+        & .input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid $color-grey;
+            border-radius: 3px;
+        }
+    }
+
+  }
+
+  .dashboard__new {
+    background: #f2f2f2;
+    margin-top: $db-header-height;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+
+    & .create-new-xls {
+      padding: 15px;
+      width: max-content;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 20px 0px #4b4b6f80;
+      cursor: pointer;
+      transition: .4s ease-in-out;
+      transform: scale(1);
+
+      & span {
+        font-size: 30px;
+        color: $color-blue;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        background: $color-blue;
+      }
+      &:hover span {
+        color: #fff;
+      }
+  }
+  }
+
+  .dashboard__table {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+
+    .xls-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      counter-reset: list; 
+
+      & li {
+        position: relative;
+        list-style: none;
+        padding: 5px 0;
+        padding-left: $item-counter + 10;
+        border-bottom: 1px solid;
+        transition: .3s ease-in-out;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: $color-blue;
+        height: $item-counter;
+
+        & .xls-data{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+        
+        &:hover {
+          box-shadow: 0 0 20px 0px #4b4b6f18;
+          margin-left: 15px;
+        }
+        &:before {
+          counter-increment: list;
+          content: "№ " counter(list) ": ";
+          font-size: 9px;
+          background: #f2f2f2;
+          margin-right: 5px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: $item-counter;
+          height: $item-counter;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

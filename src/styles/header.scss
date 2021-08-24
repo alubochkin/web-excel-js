@@ -1,0 +1,52 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.excel__header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+
+  & .input {
+    margin: 0;
+    padding: 2px 5px;
+    border: 1px solid $color-grey;
+    outline: none;
+    font-size: $font-size;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      border: 1px solid $color-blue;
+    }
+    &:focus {
+      border: 2px solid $color-blue;
+    }
+
+  }
+  & .button-block {
+    display: flex;
+    gap: 5px;
+
+    & .button.delete {
+      @include button($color-red, none, 5px, 30px, $color-grey-light);
+      & span {
+        font-size: $size-icons * 1.1;
+      }
+    }
+
+    & .button.logout {
+      @include button($color-blue, none, 5px, 30px, $color-grey-light);
+      & span {
+        font-size: $size-icons * 1.1;
+      }
+    }
+
+  }
+}

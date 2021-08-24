@@ -1,0 +1,47 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.excel__toolbar {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: $header-height;
+  height: $toolbar-height;
+  border-top: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px;
+
+  & div {
+    display: flex;
+  }
+  & .button {
+    @include button(#000, none, 5px, 0, $color-grey-light);
+    height: 30px;
+    position: relative;
+    & span {
+      font-size: $size-icons * 0.9;
+    }
+    & input {
+      cursor: pointer;
+      border: none;
+      height: 32px;
+      width: 21px;
+      z-index: 1000;
+      position: absolute;
+      bottom: -8px;
+      padding: 10px 0;
+      background-color: #fff0;
+    }
+  }
+  .color {
+    display: flex;
+    overflow: hidden;
+    & .button {
+      flex-direction: column;
+    }
+  }
+}
