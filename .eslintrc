@@ -6,9 +6,14 @@
     "node": true
   },
   "rules": {
+    "no-unused-vars":"warn",
+    "max-len":"off",
+    "operator-linebreak": "off",
+    "object-curly-spacing":"off",
+    "no-extra-boolean-cast":"off",
     "require-jsdoc": ["error", {
       "require": {
-          "FunctionDeclaration": true,
+          "FunctionDeclaration": false,
           "MethodDefinition": false,
           "ClassDeclaration": false,
           "ArrowFunctionExpression": false,
