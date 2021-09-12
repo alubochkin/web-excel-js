@@ -30,12 +30,40 @@ class Dom {
     return this;
   }
 
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector);
+  }
+
+  // el.css({})
+
+  css(styles = {}) {
+    if (styles && !!Object.values(styles).length) {
+      Object
+          .keys(styles)
+          .forEach((keys) => this.$el.style[keys] = styles[keys]);
+    } else {
+      console.log('----------- null');
+      this.$el.style = '';
+    }
+  }
+
+  closest(selector) {
+    return $(this.$el.closest(selector));
+  }
+
   on(eventType, cb) {
     this.$el.addEventListener(eventType, cb);
   }
 
   off(eventType, cb) {
     this.$el.removeEventListener(eventType, cb);
+  }
+
+  getCoord() {
+    return this.$el.getBoundingClientRect();
+  }
+  get data() {
+    return this.$el.dataset;
   }
 }
 
